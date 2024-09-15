@@ -1,7 +1,7 @@
 export const productExample = {
   id: 1,
   title: "Product title",
-  image: "https://example.com/image.jpg",
+  image: undefined,
   price: 100,
   description: "Product description",
   brand: "Product brand",

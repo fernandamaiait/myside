@@ -18,7 +18,7 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
               ? styles["selected-chip"]
               : styles.chip
           }`}
-          onClick={() => (toggleCategory ? category : null)}
+          onClick={() => (toggleCategory ? toggleCategory(category) : null)}
         >
           {category}
         </div>

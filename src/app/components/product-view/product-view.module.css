@@ -23,20 +23,29 @@
 }
 
 .image {
-  width: 50%;
-  object-fit: cover;
-  height: 50%;
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 
 @media (max-width: 480px) {
   .image {
-    width: 100%;
+    width: auto;
+    height: 100%;
+    position: relative;
   }
 }
 
 .details {
+  width: 50%;
   padding: 15px;
   height: 100%;
+}
+
+@media (max-width: 480px) {
+  .details {
+    width: 100%;
+  }
 }
 
 .title {
