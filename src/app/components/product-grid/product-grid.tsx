@@ -24,13 +24,13 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
 
       if (selectedCategories.length > 0) {
         result = result.filter((product) =>
-          selectedCategories.includes(product.category)
+          selectedCategories.includes(product.category),
         );
       }
 
       if (searchQuery) {
         result = result.filter((product) =>
-          product.title.toLowerCase().includes(searchQuery.toLowerCase())
+          product.title.toLowerCase().includes(searchQuery.toLowerCase()),
         );
       }
 
@@ -44,7 +44,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
     setSelectedCategories((prevSelectedCategories) =>
       prevSelectedCategories.includes(category)
         ? prevSelectedCategories.filter((c) => c !== category)
-        : [...prevSelectedCategories, category]
+        : [...prevSelectedCategories, category],
     );
   };
 

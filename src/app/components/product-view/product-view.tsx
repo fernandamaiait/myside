@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./product-view.module.css";
-import { Product } from "@/app/general-types/Product";
 import { ProductViewProps } from "./product-view.types";
 
 const ProductView: React.FC<ProductViewProps> = ({ product, dataCy }) => {

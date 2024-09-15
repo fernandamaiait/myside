@@ -1,9 +1,9 @@
 import { ProductView } from "../components/product-view";
 
-const fetchData = async (id: any) => {
+const fetchData = async (id: string) => {
   try {
     const productResponse = await fetch(
-      `https://fakestoreapi.in/api/products/${id}`
+      `https://fakestoreapi.in/api/products/${id}`,
     );
     if (!productResponse.ok) {
       throw new Error("Erro ao buscar dados");

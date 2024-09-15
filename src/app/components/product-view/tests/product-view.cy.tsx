@@ -14,7 +14,7 @@ describe("<ProductView />", () => {
   it("shows product title", () => {
     cy.get(`[data-cy=${productDataCy}_TITLE]`).should(
       "contain",
-      productExample.title
+      productExample.title,
     );
   });
 });

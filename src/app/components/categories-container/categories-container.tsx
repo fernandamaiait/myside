@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import styles from "./categories-container.module.css";
 import { CategoriesContainerProps } from "./categories-container.types";
 

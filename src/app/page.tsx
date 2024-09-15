@@ -1,8 +1,6 @@
 import styles from "./page.module.css";
 import ProductGrid from "./components/product-grid/product-grid";
 import Loading from "./loading";
-import { CategoriesContainer } from "./components/categories-container";
-import { useState } from "react";
 
 const fetchData = async () => {
   try {
