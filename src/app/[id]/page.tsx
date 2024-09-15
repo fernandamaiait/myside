@@ -28,7 +28,6 @@ const ProductPage = async ({ params }: Params) => {
   const { id } = params;
   const { product } = await fetchData(id);
 
-  console.log(product);
   if (!product) {
     return <p>Carregando...</p>;
   }
