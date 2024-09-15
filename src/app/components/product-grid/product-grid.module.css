@@ -1,8 +1,24 @@
+.searchContainer {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInput {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px;
+  width: 100%;
 }
 
 .grid-item {
@@ -52,4 +68,15 @@
 .product-price {
   color: #555;
   font-size: 16px;
+}
+
+.no-product-container {
+  display: flex;
+  justify-content: center;
+  color: #555;
+  font-size: 16px;
+  min-width: 100%;
+  color: #fff;
+  padding: 16px;
+  min-height: 300px;
 }
