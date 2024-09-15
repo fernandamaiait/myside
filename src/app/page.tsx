@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import ProductGrid from "./components/product-grid/product-grid";
 import Loading from "./loading";
+import { CategoriesContainer } from "./components/categories-container";
+import { useState } from "react";
 
 const fetchData = async () => {
   try {
@@ -24,16 +26,16 @@ const fetchData = async () => {
 };
 
 const Home = async () => {
-  const data = await fetchData();
+  const { products, categories } = await fetchData();
 
-  if (!data.products.length) {
+  if (!products.length) {
     return <Loading />;
   }
 
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <ProductGrid products={data.products} />
+        <ProductGrid products={products} categories={categories} />
       </main>
       <footer className={styles.footer}></footer>
     </div>
