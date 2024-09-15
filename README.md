@@ -1,10 +1,14 @@
 ## Introdução
 
-Este é um projeto desenvolvido com [Next.js](https://nextjs.org).
-Eu nunca usei o Jest no Next e não consegui configurar ele em tempo hábil para entregar o teste.
+Este é um projeto desenvolvido com [Next.js](https://nextjs.org) e a api [FakeStoreAPI](https://fakestoreapi.in/).
+Eu nunca usei o Jest no Next e não consegui configurar ele em tempo hábil para entregar o teste (minhas tentativas estão registradas na branch feature/jest).
 Para não ficar sem testes, usei o [Cypress](www.cypress.io), que é o que eu uso no dia a dia e sei configurar.
 Ao longo das instruções abaixo está escrito como executar os testes no Cypress.
-Se meu teste não puder ser considerado por causa disso, eu entendo totalmente =)
+
+A api não tem filtro por descrição, então fiz o filtro local (no front).
+A api tem filtro para categoria mas eu não tinha certeza se era para filtrar fazendo a request na api, então fiz local tamben.
+
+Se meu teste não puder ser considerado por causa dessas coisas, eu entendo totalmente =)
 
 ### Projeto publicado na Vercel
 
