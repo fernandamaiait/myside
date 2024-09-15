@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress:run": "cypress run --component",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
     "check-types": "tsc --pretty --noEmit"
