@@ -1,12 +1,23 @@
 import React from "react";
 import styles from "./product-view.module.css";
 import { ProductViewProps } from "./product-view.types";
+import Image from "next/image";
 
 const ProductView: React.FC<ProductViewProps> = ({ product, dataCy }) => {
   return (
     <div className={styles.container}>
       <div className={styles.card} data-cy={dataCy}>
-        <img src={product.image} alt={product.title} className={styles.image} />
+        {product.image && (
+          <div className={styles.image}>
+            <Image
+              src={product.image}
+              alt={product.title}
+              layout="responsive"
+              width={100}
+              height={100}
+            />
+          </div>
+        )}
         <div className={styles.details}>
           <h2 className={styles.title} data-cy={`${dataCy}_TITLE`}>
             {product.title}
