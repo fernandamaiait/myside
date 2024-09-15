@@ -4,15 +4,12 @@ import { Product } from "@/app/general-types/Product";
 import styles from "./product-grid.module.css";
 import { CategoriesContainer } from "../categories-container";
 import { useEffect, useState } from "react";
-
-interface ProductsGridProps {
-  products: Product[];
-  categories: string[];
-}
+import { ProductsGridProps } from "./product-grid.types";
 
 const ProductsGrid: React.FC<ProductsGridProps> = ({
   products,
   categories,
+  dataCy,
 }) => {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -24,13 +21,13 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
 
       if (selectedCategories.length > 0) {
         result = result.filter((product) =>
-          selectedCategories.includes(product.category),
+          selectedCategories.includes(product.category)
         );
       }
 
       if (searchQuery) {
         result = result.filter((product) =>
-          product.title.toLowerCase().includes(searchQuery.toLowerCase()),
+          product.title.toLowerCase().includes(searchQuery.toLowerCase())
         );
       }
 
@@ -44,12 +41,12 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
     setSelectedCategories((prevSelectedCategories) =>
       prevSelectedCategories.includes(category)
         ? prevSelectedCategories.filter((c) => c !== category)
-        : [...prevSelectedCategories, category],
+        : [...prevSelectedCategories, category]
     );
   };
 
   return (
-    <>
+    <div data-cy={dataCy}>
       <div className={styles.searchContainer}>
         <input
           type="text"
@@ -85,7 +82,7 @@ const ProductsGrid: React.FC<ProductsGridProps> = ({
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

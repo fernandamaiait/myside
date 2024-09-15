@@ -1,5 +1,6 @@
 export type CategoriesContainerProps = {
   categories: string[];
-  selectedCategories: string[];
-  toggleCategory: (category: string) => void;
+  selectedCategories?: string[];
+  toggleCategory?: (category: string) => void;
+  dataCy?: string;
 };

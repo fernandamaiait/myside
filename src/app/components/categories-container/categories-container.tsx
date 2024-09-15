@@ -6,18 +6,19 @@ const CategoriesContainer: React.FC<CategoriesContainerProps> = ({
   categories,
   selectedCategories,
   toggleCategory,
+  dataCy,
 }) => {
   return (
-    <div className={styles["chip-container"]}>
+    <div className={styles["chip-container"]} data-cy={dataCy}>
       {categories.map((category) => (
         <div
           key={category}
           className={`${styles["chip-base"]} ${
-            selectedCategories.includes(category)
+            selectedCategories?.includes(category)
               ? styles["selected-chip"]
               : styles.chip
           }`}
-          onClick={() => toggleCategory(category)}
+          onClick={() => (toggleCategory ? category : null)}
         >
           {category}
         </div>

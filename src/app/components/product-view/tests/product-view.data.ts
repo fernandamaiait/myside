@@ -1,5 +1,5 @@
 export const productExample = {
-  id: "1",
+  id: 1,
   title: "Product title",
   image: "https://example.com/image.jpg",
   price: 100,

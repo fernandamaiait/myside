@@ -33,7 +33,11 @@ const Home = async () => {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <ProductGrid products={products} categories={categories} />
+        <ProductGrid
+          products={products}
+          categories={categories}
+          dataCy="PRODUCT_GRID"
+        />
       </main>
       <footer className={styles.footer}></footer>
     </div>
