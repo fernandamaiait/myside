@@ -6,7 +6,7 @@ Para não ficar sem testes, usei o [Cypress](www.cypress.io), que é o que eu us
 Ao longo das instruções abaixo está escrito como executar os testes no Cypress.
 
 A api não tem filtro por descrição, então fiz o filtro local (no front).
-A api tem filtro para categoria mas eu não tinha certeza se era para filtrar fazendo a request na api, então fiz local tamben.
+A api tem filtro para categoria mas eu não tinha certeza se era para filtrar fazendo a request na api, então fiz local também.
 
 Se meu teste não puder ser considerado por causa dessas coisas, eu entendo totalmente =)
 
