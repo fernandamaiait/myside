@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "./product-view.module.css";
 import { Product } from "@/app/general-types/Product";
+import { ProductViewProps } from "./product-view.types";
 
-const ProductView: React.FC<{ product: Product }> = ({ product }) => {
-  console.log(product);
+const ProductView: React.FC<ProductViewProps> = ({ product, dataCy }) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-cy={dataCy}>
       <img src={product.image} alt={product.title} className={styles.image} />
       <div className={styles.details}>
-        <h2 className={styles.title}>{product.title}</h2>
+        <h2 className={styles.title} data-cy={`${dataCy}_TITLE`}>
+          {product.title}
+        </h2>
         <p className={styles.price}>${product.price}</p>
         <p className={styles.description}>{product.description}</p>
         <p className={styles.info}>
