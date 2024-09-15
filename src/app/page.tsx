@@ -1,12 +1,13 @@
 import styles from "./page.module.css";
 import ProductGrid from "./components/product-grid/product-grid";
 import Loading from "./loading";
+import { baseUrl } from "./general-consts";
 
 const fetchData = async () => {
   try {
     const [productsResponse, categoriesResponse] = await Promise.all([
-      fetch("https://fakestoreapi.in/api/products"),
-      fetch("https://fakestoreapi.in/api/products/category"),
+      fetch(`${baseUrl}/products`),
+      fetch(`${baseUrl}/products/category`),
     ]);
 
     if (!productsResponse.ok || !categoriesResponse.ok) {
