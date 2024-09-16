@@ -1,8 +1,9 @@
 "use client";
-export default function LoadingPage() {
+export default function ErrorPage() {
   return (
     <div
       style={{
+        color: "red",
         width: "100%",
         height: "100vh",
         justifyContent: "center",
@@ -11,7 +12,7 @@ export default function LoadingPage() {
         textAlign: "center",
       }}
     >
-      <p>Carregando...</p>
+      <p>Erro ao tentar carregar os dados</p>
     </div>
   );
 }

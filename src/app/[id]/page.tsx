@@ -1,19 +1,18 @@
 import { ProductView } from "../components/product-view";
+import { baseUrl } from "../general-consts";
 
 const fetchData = async (id: string) => {
   try {
-    const productResponse = await fetch(
-      `https://fakestoreapi.in/api/products/${id}`
-    );
+    const productResponse = await fetch(`${baseUrl}/products/${id}`);
     if (!productResponse.ok) {
-      throw new Error("Erro ao buscar dados");
+      Error();
     }
 
     const product = await productResponse.json();
 
     return { product: product.product };
   } catch (error) {
-    alert("Erro ao buscar dados: " + error);
+    Error("Erro ao buscar dados: " + error);
     return { product: [] };
   }
 };
@@ -29,7 +28,20 @@ const ProductPage = async ({ params }: Params) => {
   const { product } = await fetchData(id);
 
   if (!product) {
-    return <p>Carregando...</p>;
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+          textAlign: "center",
+        }}
+      >
+        <p>Produto não encontrado</p>
+      </div>
+    );
   }
 
   return (

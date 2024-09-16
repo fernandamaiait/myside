@@ -19,8 +19,7 @@ const fetchData = async () => {
 
     return { products: products.products, categories: categories.categories };
   } catch (error) {
-    alert("Erro ao buscar dados: " + error);
-    return { products: [], categories: [] };
+    throw new Error("Erro ao buscar dados: " + error);
   }
 };
 
